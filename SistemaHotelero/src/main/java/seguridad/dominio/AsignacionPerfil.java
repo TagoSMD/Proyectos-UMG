@@ -9,12 +9,14 @@ public class AsignacionPerfil {
     public AsignacionPerfil(int id_usuario, int id_perfil) {
         this.id_usuario = id_usuario;
         this.id_perfil = id_perfil;
+        
     }
 
     public AsignacionPerfil() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    
+    
     public int getId_usuario() {
         return id_usuario;
     }
