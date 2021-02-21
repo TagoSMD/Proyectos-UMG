@@ -3,25 +3,22 @@ package seguridad.dominio;
 
 public class AsignacionPerfil {
     
-    private int id_usuario;
+    private String id_usuario;
     private int id_perfil;
-
-    public AsignacionPerfil(int id_usuario, int id_perfil) {
-        this.id_usuario = id_usuario;
-        this.id_perfil = id_perfil;
-        
-    }
 
     public AsignacionPerfil() {
     }
-    
-    
-    
-    public int getId_usuario() {
+
+    public AsignacionPerfil(String id_usuario, int id_perfil) {
+        this.id_usuario = id_usuario;
+        this.id_perfil = id_perfil;
+    }
+
+    public String getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(String id_usuario) {
         this.id_usuario = id_usuario;
     }
 
@@ -32,6 +29,9 @@ public class AsignacionPerfil {
     public void setId_perfil(int id_perfil) {
         this.id_perfil = id_perfil;
     }
+
+
+  
 
         @Override
     public String toString() {

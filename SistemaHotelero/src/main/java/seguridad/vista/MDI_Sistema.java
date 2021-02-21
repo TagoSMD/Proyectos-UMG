@@ -10,6 +10,7 @@ import javax.swing.ImageIcon;
  * @author Diego
  */
 public class MDI_Sistema extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form MDI_Seguridad
@@ -101,6 +102,11 @@ public class MDI_Sistema extends javax.swing.JFrame {
 
         jMenuItem6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jMenuItem6.setText("Perfiles - Usuarios");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem6);
 
         jMenuItem7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -152,6 +158,11 @@ public class MDI_Sistema extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
