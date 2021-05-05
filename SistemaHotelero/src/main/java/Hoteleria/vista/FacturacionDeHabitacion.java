@@ -121,6 +121,11 @@ public class FacturacionDeHabitacion extends javax.swing.JInternalFrame {
         jLabel6.setText("Forma de Pago:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar...", "Efectivo", "Tarjeta" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("No. Tarjeta:");
 
@@ -447,6 +452,10 @@ public class FacturacionDeHabitacion extends javax.swing.JInternalFrame {
 
         
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

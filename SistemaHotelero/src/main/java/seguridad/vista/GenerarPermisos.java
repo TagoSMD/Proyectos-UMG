@@ -121,12 +121,12 @@ public class GenerarPermisos {
                 }
             }
             if (modulo == "Hotelero") {
-                MDIHoteleria.menu_archivo.setVisible(false);
+                MDIHoteleria.menu_archivo.setVisible(true);
                 MDIHoteleria.menu_ayuda.setVisible(true);
-                MDIHoteleria.menu_catalogos.setVisible(false);
+                MDIHoteleria.menu_catalogos.setVisible(true);
                 MDIHoteleria.menu_herramientas.setVisible(true);
                 MDIHoteleria.menu_informes.setVisible(true);
-                MDIHoteleria.menu_procesos.setVisible(false);
+                MDIHoteleria.menu_procesos.setVisible(true);
                 MDIHoteleria.cerrar_sesion.setVisible(true);
                 ejecutarPermisos.ejecutarBusqueda(usuario);
                 for (int i = 0; i < ejecutarPermisos.getAplicaciones().length; i++) {
