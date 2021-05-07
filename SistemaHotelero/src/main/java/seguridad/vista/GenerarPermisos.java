@@ -55,19 +55,19 @@ public class GenerarPermisos {
             }
             if (modulo == "Finanzas") {
 
-                MDIFinanzas.JMenuCatalogos.setEnabled(false);
-                MDIFinanzas.JMenuProcesos.setEnabled(false);
-                MDIFinanzas.JMenuInformes.setEnabled(false);
-                MDIFinanzas.JMenuClasificacionCuentas.setEnabled(false);
-                MDIFinanzas.JMenuPeriodoFiscal.setEnabled(false);
-                MDIFinanzas.JMenuTipoTransaccion.setEnabled(false);
-                MDIFinanzas.JMenuCuentasContables.setEnabled(false);
-                MDIFinanzas.JMenuTipoAsientoContable.setEnabled(false);
-                MDIFinanzas.JMenuDivisas.setEnabled(false);
-                MDIFinanzas.JMenuCuentaBancaria.setEnabled(false);
-                MDIFinanzas.JMenuPersonaBancaria.setEnabled(false);
-                MDIFinanzas.JMenuBancos.setEnabled(false);
-                MDIFinanzas.JMenuCuentahabiente.setEnabled(false);
+                MDIFinanzas.JMenuCatalogos.setEnabled(true);
+                MDIFinanzas.JMenuProcesos.setEnabled(true);
+                MDIFinanzas.JMenuInformes.setEnabled(true);
+                MDIFinanzas.JMenuClasificacionCuentas.setEnabled(true);
+                MDIFinanzas.JMenuPeriodoFiscal.setEnabled(true);
+                MDIFinanzas.JMenuTipoTransaccion.setEnabled(true);
+                MDIFinanzas.JMenuCuentasContables.setEnabled(true);
+                MDIFinanzas.JMenuTipoAsientoContable.setEnabled(true);
+                MDIFinanzas.JMenuDivisas.setEnabled(true);
+                MDIFinanzas.JMenuCuentaBancaria.setEnabled(true);
+                MDIFinanzas.JMenuPersonaBancaria.setEnabled(true);
+                MDIFinanzas.JMenuBancos.setEnabled(true);
+                MDIFinanzas.JMenuCuentahabiente.setEnabled(true);
 
                 ejecutarPermisos.ejecutarBusqueda(usuario);
 

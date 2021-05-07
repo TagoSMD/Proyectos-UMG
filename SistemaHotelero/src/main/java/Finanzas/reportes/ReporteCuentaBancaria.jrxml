@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3bd1e4d8-f66e-4c2b-a944-9447be2acc2e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM finanzas.cuentabancaria;]]>
+	</queryString>
+	<field name="Numero_CuentaBancaria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Moneda_Cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CuentaHabiente_Cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Banco_Cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="12" width="417" height="53" uuid="3f9fa430-12bb-463f-9ab3-7e22a2a97d16"/>
+				<textElement>
+					<font size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Cuenta Bancaria]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="dbe87c54-e32f-448c-8e69-c200170128c0"/>
+				<text><![CDATA[Numero  Cuenta Bancaria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="20" uuid="471a2b63-24e1-4f81-ad02-3612622b3a40"/>
+				<text><![CDATA[Moneda Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="20" uuid="fc34b1af-8f51-4eb4-a478-93fc9746eceb"/>
+				<text><![CDATA[CuentaHabiente Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="2c849a09-8296-46a7-8b5e-f7b30a1a56c4"/>
+				<text><![CDATA[Banco_Cuenta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="40a683e4-ca61-4bc3-a257-a7e6ac061870"/>
+				<textFieldExpression><![CDATA[$F{Numero_CuentaBancaria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="87c8ad71-015f-45b5-af61-9c02a6297255"/>
+				<textFieldExpression><![CDATA[$F{Moneda_Cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="1aa4ae8a-8a5b-49df-a004-45f07521e1ef"/>
+				<textFieldExpression><![CDATA[$F{CuentaHabiente_Cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="af7aeec7-f11b-42e0-aec3-ce8235f98207"/>
+				<textFieldExpression><![CDATA[$F{Banco_Cuenta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

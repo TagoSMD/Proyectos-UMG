@@ -8,7 +8,7 @@ public class ConexionHoteleria {
 
     private static final String JDBC_URL = "jdbc:mysql://localhost/hoteleria?useSSL=false&serverTimezone=UTC";
     private static final String JDBC_USER = "root";
-    private static final String JDBC_PASS = "";
+    private static final String JDBC_PASS = "1234";
 
 
     public static Connection getConnection() throws SQLException {

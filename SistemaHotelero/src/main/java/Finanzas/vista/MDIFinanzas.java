@@ -5,14 +5,24 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.net.UnknownHostException;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
 import seguridad.vista.GenerarPermisos;
 import seguridad.vista.Login;
 import seguridad.vista.MDI_Components;
+import Finanzas.datos.Conexion;
+import java.io.File;
+import java.sql.Connection;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.view.JasperViewer;
 
 /*
     @author Diego Vásquez
@@ -64,6 +74,7 @@ public class MDIFinanzas extends javax.swing.JFrame {
         JMenuItemAsientoContable = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         JMenuInformes = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         JMenuHerramientas = new javax.swing.JMenu();
         JMenuAyuda = new javax.swing.JMenu();
 
@@ -213,6 +224,15 @@ public class MDIFinanzas extends javax.swing.JFrame {
 
         JMenuInformes.setText("Informes");
         JMenuInformes.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+
+        jMenuItem2.setText("Cuenta Bancaria");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        JMenuInformes.add(jMenuItem2);
+
         JMenuBarFinanzas.add(JMenuInformes);
 
         JMenuHerramientas.setText("Herramientas");
@@ -339,6 +359,30 @@ public class MDIFinanzas extends javax.swing.JFrame {
         JDesktopFinanzas.add(FrmTransacion);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        
+                Map p = new HashMap();
+        JasperReport report;
+        JasperPrint print;
+
+        try {
+                Connection connection = Conexion.getConnection();
+            report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
+                    + "/src/main/java/Finanzas/reportes/ReporteCuentaBancaria.jrxml");
+            print = JasperFillManager.fillReport(report, p, connection);
+            JasperViewer view = new JasperViewer(print, false);
+            view.setTitle("Reporte de Cuenta Bancaria");
+            view.setVisible(true);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     public static void main(String args[]) {
 
         //FLATLAF
@@ -383,5 +427,6 @@ public class MDIFinanzas extends javax.swing.JFrame {
     public static javax.swing.JMenuItem JMenuTipoAsientoContable;
     public static javax.swing.JMenuItem JMenuTipoTransaccion;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }

@@ -329,6 +329,7 @@ seguridad\vista\Asignacion_de_aplicacion_a_usuario$7.class
 Finanzas\vista\Mantenimiento_PeriodoFiscal$5.class
 Hoteleria\vista\Mantenimiento_Pisos.class
 Hoteleria\vista\Mantenimiento_habitaciones$7.class
+Finanzas\vista\MDIFinanzas$15.class
 Finanzas\vista\FrmCuentaHabiente$1.class
 seguridad\dominio\Asignacion_Usuario_Perfil.class
 Finanzas\vista\MDIFinanzas$1.class
