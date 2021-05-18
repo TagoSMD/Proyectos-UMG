@@ -309,12 +309,10 @@ public class MDIFinanzas extends javax.swing.JFrame {
     }//GEN-LAST:event_JMenuCuentaBancariaActionPerformed
 
     private void JMenuCuentahabienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuCuentahabienteActionPerformed
-        try {
+        
             // TODO add your handling code here:
             FrmHabiente = new FrmCuentaHabiente();
-        } catch (SQLException ex) {
-            Logger.getLogger(MDIFinanzas.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     
         JDesktopFinanzas.add(FrmHabiente);
     }//GEN-LAST:event_JMenuCuentahabienteActionPerformed
 
@@ -350,12 +348,10 @@ public class MDIFinanzas extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
        
-        try {
+      
             // TODO add your handling code here:
             FrmTransacion = new Transaccion_Bancaria();
-        } catch (SQLException ex) {
-            Logger.getLogger(MDIFinanzas.class.getName()).log(Level.SEVERE, null, ex);
-        }
+  
 
         JDesktopFinanzas.add(FrmTransacion);
     }//GEN-LAST:event_jMenuItem1ActionPerformed

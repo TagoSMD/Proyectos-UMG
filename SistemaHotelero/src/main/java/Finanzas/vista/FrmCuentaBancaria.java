@@ -15,7 +15,6 @@ import Finanzas.datos.CuentaHabienteDAO;
 import Finanzas.dominio.Banco;
 import Finanzas.datos.BancoDAO;
 import Finanzas.datos.Conexion;
-import com.mysql.cj.Query;
 import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.util.HashMap;
@@ -403,20 +402,7 @@ public class FrmCuentaBancaria extends javax.swing.JInternalFrame {
            
           //LLena La jtable con los datos ya ingresados en db
            llenadoDeTablas();
-           
-            BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmCuentaBancaria");
-        AInsertar.setAccion("Registrar");
-        AInsertar.setCodigoAplicacion("1006");
-        AInsertar.setModulo("Finanzas");
-        
-        try{
-            BitacoraDAO.insert(AInsertar);
-            
-        } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmCuentaBancaria.class.getName()).log(Level.SEVERE, null, ex);
-          }
+  
            
     }//GEN-LAST:event_BtnIngActionPerformed
  
@@ -441,18 +427,7 @@ public class FrmCuentaBancaria extends javax.swing.JInternalFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-         BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmCuentaBancaria");
-        AInsertar.setAccion("Imprimir");
-        AInsertar.setCodigoAplicacion("1006");
-        AInsertar.setModulo("Finanzas");
-        try{
-            BitacoraDAO.insert(AInsertar);
-            
-        } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmCuentaHabiente.class.getName()).log(Level.SEVERE, null, ex);
-          }
+    
     }//GEN-LAST:event_BtnElimActionPerformed
 
     private void Cbox_CuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cbox_CuentaActionPerformed
@@ -526,18 +501,7 @@ public class FrmCuentaBancaria extends javax.swing.JInternalFrame {
 
         llenadoDeTablas();
     
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmCuentaBancaria");
-        AInsertar.setAccion("Eliminar");
-        AInsertar.setCodigoAplicacion("1006");
-        AInsertar.setModulo("Finanzas");
-        try{
-            BitacoraDAO.insert(AInsertar);
-            
-        } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmCuentaHabiente.class.getName()).log(Level.SEVERE, null, ex);
-          }
+  
     }//GEN-LAST:event_BtnElim1ActionPerformed
 
 

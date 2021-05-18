@@ -111,13 +111,9 @@
                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="TxtCodigo" min="-2" pref="253" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="BtnAyuda" min="-2" pref="95" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="TxtCodigo" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -125,14 +121,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="TxtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="BtnAyuda" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="TxtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="label9" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="Fecha" min="-2" max="-2" attributes="0"/>
@@ -274,22 +267,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BtnAyuda">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dialog" size="12" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Ayuda:"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder/>
-              </Border>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAyudaActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="btnEliminar1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -337,6 +314,9 @@
         <Component class="javax.swing.JTextField" name="TxtBeneficiario">
         </Component>
         <Component class="javax.swing.JTextField" name="TxtMonto">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TxtMontoKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtConcepto">
         </Component>

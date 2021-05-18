@@ -38,7 +38,7 @@ public class FrmTipoTransaccion extends javax.swing.JInternalFrame {
     private Connection connection;
     // metodo de llenado de tablas automaticamente aparecen los datos guardados en bd y se despliega en automatico ademas crea las tablas en el jtable
   public void llenadoDeTablas() {
-      try {
+
           DefaultTableModel modelo = new DefaultTableModel();
           modelo.addColumn("Codigo");
           modelo.addColumn("Tipo Transaccion");
@@ -47,7 +47,7 @@ public class FrmTipoTransaccion extends javax.swing.JInternalFrame {
 
           
           TipoTransaccionDAO TipoTDAO = new TipoTransaccionDAO();
-          List<TipoTransaccion> tipot = TipoTDAO.select();
+          List<TipoTransaccion> tipot = TipoTDAO.listar();
           JTableTransaccion.setModel(modelo);
           String[] dato = new String[3];
           for (int i = 0; i < tipot.size(); i++) {
@@ -56,9 +56,7 @@ public class FrmTipoTransaccion extends javax.swing.JInternalFrame {
               dato[2] = Integer.toString(tipot.get(i).getEfecto_TipoTransaccion());
               modelo.addRow(dato);
           }
-      } catch (SQLException ex) {
-          Logger.getLogger(FrmTipoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
-      }
+    
     }
   
  
