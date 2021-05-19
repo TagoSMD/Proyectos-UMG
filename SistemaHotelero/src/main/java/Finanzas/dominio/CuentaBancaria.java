@@ -15,15 +15,17 @@ public class CuentaBancaria {
     private String Moneda_Cuenta;
     private String CuentaHabiente_Cuenta;
     private String Banco_Cuenta;
+    private String Saldo;
 
     public CuentaBancaria() {
     }
 
-    public CuentaBancaria(String Numero_CuentaBancaria, String Moneda_Cuenta, String CuentaHabiente_Cuenta, String Banco_Cuenta) {
+    public CuentaBancaria(String Numero_CuentaBancaria, String Moneda_Cuenta, String CuentaHabiente_Cuenta, String Banco_Cuenta, String Saldo) {
         this.Numero_CuentaBancaria = Numero_CuentaBancaria;
         this.Moneda_Cuenta = Moneda_Cuenta;
         this.CuentaHabiente_Cuenta = CuentaHabiente_Cuenta;
         this.Banco_Cuenta = Banco_Cuenta;
+        this.Saldo = Saldo;
     }
 
     public String getNumero_CuentaBancaria() {
@@ -58,11 +60,20 @@ public class CuentaBancaria {
         this.Banco_Cuenta = Banco_Cuenta;
     }
 
+    public String getSaldo() {
+        return Saldo;
+    }
+
+    public void setSaldo(String Saldo) {
+        this.Saldo = Saldo;
+    }
+
     @Override
     public String toString() {
-        return "CuentaBancaria{" + "Numero_CuentaBancaria=" + Numero_CuentaBancaria + ", Moneda_Cuenta=" + Moneda_Cuenta + ", CuentaHabiente_Cuenta=" + CuentaHabiente_Cuenta + ", Banco_Cuenta=" + Banco_Cuenta + '}';
+        return "CuentaBancaria{" + "Numero_CuentaBancaria=" + Numero_CuentaBancaria + ", Moneda_Cuenta=" + Moneda_Cuenta + ", CuentaHabiente_Cuenta=" + CuentaHabiente_Cuenta + ", Banco_Cuenta=" + Banco_Cuenta + ", Saldo=" + Saldo + '}';
     }
-    
+
+   
     
             
 

@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import Finanzas.dominio.TransaccionBancaria;
+import Finanzas.dominio.CuentaBancaria;
+
 
 /**
  * 
@@ -23,9 +25,10 @@ import Finanzas.dominio.TransaccionBancaria;
 public class TransaccionBancariaDAO {
     private static final String sql_select = "SELECT Codigo_Transaccion, Fecha_Transaccion, Beneficiario,Cuenta_Bancaria,Tipo_Transaccion,Monto_Transaccion,Concepto_Transaccion FROM TransaccionBancaria";
     private static final String sql_insert = "INSERT INTO TransaccionBancaria VALUES(?,?,?,?,?,?,?)";
-    private static final String SQL_UPDATE = "UPDATE TransaccionBancaria SET Codigo_Transaccion=?, Fecha_Transaccion=?, Beneficiario=?,Cuenta_Bancaria=?,Tipo_Transaccion=?,Monto_Transaccion=?,Concepto_Transaccion=? WHERE Codigo_Transaccion = ?";
+    private static final String SQL_UPDATE = "UPDATE CuentaBancaria SET Saldo=? WHERE Monto_Transaccion = ?";
     private static final String sql_delete = "DELETE FROM TransaccionBancaria WHERE Codigo_Transaccion=?";
     private static final String sql_query = "SELECT Codigo_Transaccion, Fecha_Transaccion, Beneficiario,Cuenta_Bancaria,Tipo_Transaccion,Monto_Transaccion,Concepto_Transaccion  FROM TransaccionBancaria WHERE Codigo_Transaccion=?";
+
 
     public List<TransaccionBancaria> listar(){
         Connection con = null;
@@ -165,6 +168,31 @@ public class TransaccionBancariaDAO {
     }
 
 
+      public int update(TransaccionBancaria cuenta){
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int rows = 0;
+        
+        try {
+            conn = Conexion.getConnection();
+            //System.out.println("ejecutando query: " + SQL_UPDATE);
+            stmt = conn.prepareStatement(SQL_UPDATE);
+          stmt.setString(1, cuenta.getMonto_Transaccion());
+
+         
+            rows = stmt.executeUpdate();
+            //System.out.println("Registros actualizado:" + rows);
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        }
+        finally{
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        
+        return rows;
+    }
 
     
 }

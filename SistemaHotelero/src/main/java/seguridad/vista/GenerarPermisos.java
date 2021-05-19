@@ -55,23 +55,23 @@ public class GenerarPermisos {
             }
             if (modulo == "Finanzas") {
 
-                MDIFinanzas.JMenuCatalogos.setEnabled(false);
-                MDIFinanzas.JMenuProcesos.setEnabled(false);
-                MDIFinanzas.JMenuInformes.setEnabled(false);
-                MDIFinanzas.JMenuClasificacionCuentas.setEnabled(false);
-                MDIFinanzas.JMenuPeriodoFiscal.setEnabled(false);
-                MDIFinanzas.JMenuTipoTransaccion.setEnabled(false);
-                MDIFinanzas.JMenuCuentasContables.setEnabled(false);
-                MDIFinanzas.JMenuTipoAsientoContable.setEnabled(false);
-                MDIFinanzas.JMenuDivisas.setEnabled(false);
-                MDIFinanzas.JMenuCuentaBancaria.setEnabled(false);
-                MDIFinanzas.JMenuPersonaBancaria.setEnabled(false);
-                MDIFinanzas.JMenuBancos.setEnabled(false);
-                MDIFinanzas.JMenuCuentahabiente.setEnabled(false);
-                MDIFinanzas.JMenuItemAsientoContable.setEnabled(false);
-                MDIFinanzas.EncabezadoAsiento.setEnabled(false);
-                MDIFinanzas.JMenuItemTB.setEnabled(false);
-                MDIFinanzas.JMenunEmisionCheque.setEnabled(false);
+                MDIFinanzas.JMenuCatalogos.setEnabled(true);
+                MDIFinanzas.JMenuProcesos.setEnabled(true);
+                MDIFinanzas.JMenuInformes.setEnabled(true);
+                MDIFinanzas.JMenuClasificacionCuentas.setEnabled(true);
+                MDIFinanzas.JMenuPeriodoFiscal.setEnabled(true);
+                MDIFinanzas.JMenuTipoTransaccion.setEnabled(true);
+                MDIFinanzas.JMenuCuentasContables.setEnabled(true);
+                MDIFinanzas.JMenuTipoAsientoContable.setEnabled(true);
+                MDIFinanzas.JMenuDivisas.setEnabled(true);
+                MDIFinanzas.JMenuCuentaBancaria.setEnabled(true);
+                MDIFinanzas.JMenuPersonaBancaria.setEnabled(true);
+                MDIFinanzas.JMenuBancos.setEnabled(true);
+                MDIFinanzas.JMenuCuentahabiente.setEnabled(true);
+                MDIFinanzas.JMenuItemAsientoContable.setEnabled(true);
+                MDIFinanzas.EncabezadoAsiento.setEnabled(true);
+                MDIFinanzas.JMenuItemTB.setEnabled(true);
+                MDIFinanzas.JMenunEmisionCheque.setEnabled(true);
 
                 ejecutarPermisos.ejecutarBusqueda(usuario);
 
@@ -146,21 +146,21 @@ public class GenerarPermisos {
                 MDIHoteleria.menu_procesos.setVisible(true);
                 MDIHoteleria.cerrar_sesion.setVisible(true);
                 MDIHoteleria.menu_procesos.setVisible(true);
-                MDIHoteleria.submenu_mantenimientos.setVisible(false);
-                MDIHoteleria.submenu_procesos.setVisible(false);
+                MDIHoteleria.submenu_mantenimientos.setVisible(true);
+                MDIHoteleria.submenu_procesos.setVisible(true);
 
-                MDIHoteleria.mnt_amadellaves.setVisible(false);
-                MDIHoteleria.mnt_formasdepago.setVisible(false);
-                MDIHoteleria.mnt_habitaciones.setVisible(false);
-                MDIHoteleria.mnt_huespedes.setVisible(false);
-                MDIHoteleria.mnt_pisos.setVisible(false);
-                MDIHoteleria.mnt_servicios.setVisible(false);
+                MDIHoteleria.mnt_amadellaves.setVisible(true);
+                MDIHoteleria.mnt_formasdepago.setVisible(true);
+                MDIHoteleria.mnt_habitaciones.setVisible(true);
+                MDIHoteleria.mnt_huespedes.setVisible(true);
+                MDIHoteleria.mnt_pisos.setVisible(true);
+                MDIHoteleria.mnt_servicios.setVisible(true);
 
-                MDIHoteleria.Reserva_De_Habitacion.setVisible(false);
-                MDIHoteleria.Entregar_Recibir_Habitacion.setVisible(false);
-                MDIHoteleria.Facturacion.setVisible(false);
-                MDIHoteleria.Objetos_Perdidos.setVisible(false);
-                MDIHoteleria.Entrega_Objetos_Perdidos.setVisible(false);
+                MDIHoteleria.Reserva_De_Habitacion.setVisible(true);
+                MDIHoteleria.Entregar_Recibir_Habitacion.setVisible(true);
+                MDIHoteleria.Facturacion.setVisible(true);
+                MDIHoteleria.Objetos_Perdidos.setVisible(true);
+                MDIHoteleria.Entrega_Objetos_Perdidos.setVisible(true);
 
                 ejecutarPermisos.ejecutarBusqueda(usuario);
                 for (int i = 0; i < ejecutarPermisos.getAplicaciones().length; i++) {

@@ -28,14 +28,24 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 import seguridad.datos.BitacoraDao;
 import seguridad.dominio.Bitacora;
+import seguridad.vista.Login;
+import static seguridad.vista.Login.usuarioFianzas;
+import seguridad.vista.Mantenimiento_Perfil;
 /**
  *
  * @author Santiago Martinez Diaz
  */
 public class FrmTipoTransaccion extends javax.swing.JInternalFrame {
     int codigoAplicacion = 1002;
-    private Connection Connection;
+    
     private Connection connection;
+    
+    BitacoraDao BitacoraDAO = new BitacoraDao();
+    Bitacora AInsertar = new Bitacora();
+    
+   
+     
+
     // metodo de llenado de tablas automaticamente aparecen los datos guardados en bd y se despliega en automatico ademas crea las tablas en el jtable
   public void llenadoDeTablas() {
       try {
@@ -342,18 +352,19 @@ public void buscarperfil(){
         tipoEliminar.setCodigo_TipoTransaccion((txtbuscado.getText()));
         tipodAO.delete(tipoEliminar);
         llenadoDeTablas();
-           BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmTipoTransaccion");
-        AInsertar.setAccion("Elimiar");
+  
+        
+        AInsertar.setId_Usuario(Login.usuarioFianzas);
+        AInsertar.setAccion("Eliminar");
         AInsertar.setCodigoAplicacion("1002");
-        AInsertar.setModulo("Finanzas");
-        try{
+        AInsertar.setModulo("1000");
+
+        try {
             BitacoraDAO.insert(AInsertar);
-            
         } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmTipoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
-          }
+            Logger.getLogger(Mantenimiento_Perfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
     }//GEN-LAST:event_BtnElimActionPerformed
 
     private void BtnModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModActionPerformed
@@ -371,18 +382,16 @@ public void buscarperfil(){
         JOptionPane.showMessageDialog(null, " Modificado Exitosamente");
         llenadoDeTablas();
         
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmTipoTransaccion");
+        AInsertar.setId_Usuario(Login.usuarioFianzas);
         AInsertar.setAccion("Modificar");
         AInsertar.setCodigoAplicacion("1002");
-        AInsertar.setModulo("Finanzas");
-        try{
+        AInsertar.setModulo("1000");
+
+        try {
             BitacoraDAO.insert(AInsertar);
-            
         } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmTipoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
-          }
+            Logger.getLogger(Mantenimiento_Perfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
     
    
     }//GEN-LAST:event_BtnModActionPerformed
@@ -407,18 +416,17 @@ public void buscarperfil(){
             e.printStackTrace();
         }
 
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmTipoTransaccion");
+        AInsertar.setId_Usuario(Login.usuarioFianzas);
         AInsertar.setAccion("Imprimir");
         AInsertar.setCodigoAplicacion("1002");
-        AInsertar.setModulo("Finanzas");
+        AInsertar.setModulo("1000");
+
         try {
             BitacoraDAO.insert(AInsertar);
-
         } catch (UnknownHostException ex) {
-            Logger.getLogger(FrmTipoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Mantenimiento_Perfil.class.getName()).log(Level.SEVERE, null, ex);
         }
+    
     }//GEN-LAST:event_BtnIngActionPerformed
 
     private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
@@ -441,17 +449,18 @@ public void buscarperfil(){
     private void BtnBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBusActionPerformed
         // TODO add your handling code here:
     buscarperfil();
-      BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmTipoTransaccion");
-        AInsertar.setAccion("buscar");
+   
+        AInsertar.setId_Usuario(Login.usuarioFianzas);
+        AInsertar.setAccion("Buscar");
         AInsertar.setCodigoAplicacion("1002");
-        try{
+        AInsertar.setModulo("1000");
+
+        try {
             BitacoraDAO.insert(AInsertar);
-            
         } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmTipoTransaccion.class.getName()).log(Level.SEVERE, null, ex);
-          }
+            Logger.getLogger(Mantenimiento_Perfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
         
     }//GEN-LAST:event_BtnBusActionPerformed
 
@@ -481,19 +490,20 @@ public void buscarperfil(){
 
        
        insertarcuenta.setEfecto_TipoTransaccion(Integer.parseInt(TxtEfecto.getText()));
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-        Bitacora AInsertar = new Bitacora();
-        AInsertar.setId_Usuario("FrmTipoTransaccion");
-        AInsertar.setAccion("buscar");
-        AInsertar.setCodigoAplicacion("1002");
-        AInsertar.setModulo("Finanzas");
-        try{
-            BitacoraDAO.insert(AInsertar);
-            
-        } catch (UnknownHostException ex) {
-              Logger.getLogger(FrmCuentaHabiente.class.getName()).log(Level.SEVERE, null, ex);
-          }
+        
        
+       AInsertar.setId_Usuario(Login.usuarioFianzas);
+        AInsertar.setAccion("Insertar");
+        AInsertar.setCodigoAplicacion("1002");
+        AInsertar.setModulo("1000");
+
+        try {
+            BitacoraDAO.insert(AInsertar);
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(Mantenimiento_Perfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
          cuentadao.insert(insertarcuenta);
 
            llenadoDeTablas();
