@@ -28,6 +28,10 @@ public class ProcesoProductoDAO {
     private static final String SQL_QUERY = "SELECT PK_id_procesoproducto, nombre_producto, nombre_bodega, existencias_producto, fechaActualizacion, ProductoNuevo, NuevaExistencia, BodegasNuevaExistencia FROM tbl_proceso_producto WHERE PK_id_procesoproducto=?";
     private static final String SQL_DELETE = "DELETE FROM tbl_proceso_producto WHERE PK_id_procesoproducto=?";
 
+     
+
+  
+  
     public List<ProcesoProducto> select() {
         Connection conn = null;
         PreparedStatement stmt = null;
